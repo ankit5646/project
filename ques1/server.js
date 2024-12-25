@@ -5,7 +5,7 @@ app.use(cors());
 
 const PORT = 5000;
 
-
+//Static list of user.
 const candidates = [
     { id: 1, name: "Amandeep", skills: "JavaScript, React", experience: 5 },
     { id: 2, name: "Bob Smith", skills: "Python, Django", experience: 3 },
@@ -20,11 +20,12 @@ const candidates = [
 ];
 
 
+//API end point
 app.get('/api/candidates', (req, res) => {
     res.json(candidates);
 });
 
-
+//Listing..
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
